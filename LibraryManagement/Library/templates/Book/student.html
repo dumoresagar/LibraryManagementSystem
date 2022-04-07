@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+       <h2>This is Book details info</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>FULL NAME</th>
+        <th>ADDRESS</th>
+        <th>DATE OF ISSUE</th>
+
+    </tr>
+    {% for book in stud_obj %}
+    <tr>
+        <td>{{book.book}}</td>
+        <td>{{book.full_name}}</td>
+        <td>{{book.address}}</td>
+        <td>{{book.date_of_issue}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+{% block title %}
+       <title>library management</title>
+{% endblock %}

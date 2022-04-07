@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+       <h2>This is Book details info</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>BOOK NAME</th>
+        <th>AUTHOR</th>
+        <th>CATEGORY</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+
+    </tr>
+    {% for book in book_obj %}
+    <tr>
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.category}}</td>
+          <td>
+            <a href="{% url 'delete_book' book.id %}">
+                <button class="btn btn-danger">Delete</button></a>
+        </td>
+         <td>
+            <a href="{% url 'update_book' book.id %}">
+                <button class="btn btn-success">Update</button></a>
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+<button><a href="{% url 'add_book' %}">add book </a></button>
+{% endblock %}
+{% block title %}
+       <title>library management</title>
+{% endblock %}

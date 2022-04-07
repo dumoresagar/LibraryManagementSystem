@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+      <h2>This is Book Enrty</h2>
+<div>
+    <form method="post" class="container">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="ADD BOOK">
+    </form>
+</div>
+{% endblock %}
+
+{% block title %}
+       <title>library management</title>
+{% endblock %}
