@@ -15,7 +15,7 @@
 </header>
 <ul class="Navbar">
     <li><a href="{% url 'add_book' %}">ADD BOOK</a></li>
-    <li><a href="{% url 'student_book' %}">BOOKS</a></li>
+    <li><a href="{% url 'show_student' %}">BOOKS</a></li>
     <span class="authlinks">
             {% if user.is_authenticated %}
             <li><a>Hello,{{user.username}}</a></li>
