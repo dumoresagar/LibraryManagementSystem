@@ -67,7 +67,11 @@ def StudentView(request):
     context={'stud_obj':stud_obj}
     return render(request,template_name,context)
 
-
+def ShowStudentView(request):
+    student_obj = Book.objects.all()
+    template_name = 'Book/stud.html'
+    context = {'student_obj': student_obj}
+    return render(request, template_name, context)
 
 
 
