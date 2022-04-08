@@ -9,5 +9,6 @@ urlpatterns=[
     path('update/<int:i>/', views.UpdateBookView, name='update_book'),
     path('studententry/', views.StudentBookView, name='student_entry'),
     path('student/', views.StudentView, name='student_book'),
+    path('showstudent/',views.ShowStudentView,name='show_student')
 
 ]
