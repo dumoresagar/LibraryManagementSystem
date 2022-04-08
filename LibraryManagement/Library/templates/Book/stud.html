@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block content %}
+
+       <h2>This is Book details info</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>BOOK NAME</th>
+        <th>AUTHOR</th>
+        <th>CATEGORY</th>
+
+
+    </tr>
+    {% for books in Student_obj %}
+    <tr>
+        <td>{{books.id}}</td>
+        <td>{{books.name}}</td>
+        <td>{{books.author}}</td>
+        <td>{{books.category}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+{% block title %}
+       <title>library management</title>
+{% endblock %}
